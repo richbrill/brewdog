@@ -1,38 +1,93 @@
-.App {
+body {
+  overflow: hidden;
+}
+
+h1 {
+  background: #dd0b01;
+  margin: 0;
+  font-size: 1rem;
   text-align: center;
+  padding: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul {
+  margin: 0;
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-tabs {
+  background: #dd0b01;
+  height: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 0;
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+.main-tabs > .react-tabs__tab--selected {
+  background: #2f2f2f;
+  border: none;
+}
+
+.main-tabs > li {
+  padding: 12px 0px;
   color: white;
+  flex-grow: 1;
+  text-align: center;
+  border-radius: 9px 9px 0 0;
+  font-size: 1.6rem;
 }
 
-.App-link {
-  color: #61dafb;
+.main-tabs > li:before,
+.main-tabs > li:after {
+  position: absolute;
+  bottom: -1px;
+  width: 6px;
+  height: 6px;
+  content: " ";
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.main-tabs > .react-tabs__tab--selected:before {
+  left: -6px;
+}
+
+.main-tabs > .react-tabs__tab--selected:after {
+  right: -6px;
+}
+
+.main-tabs > .react-tabs__tab--selected:after, .main-tabs > .react-tabs__tab--selected:before {
+  border: 1px solid #2f2f2f;
+}
+
+.main-tabs > .react-tabs__tab--selected:before {
+  border-bottom-right-radius: 9px;
+  border-width: 0 2px 2px 0;
+  box-shadow: 2px 2px 0 #2f2f2f;
+}
+
+.main-tabs > .react-tabs__tab--selected:after {
+  border-bottom-left-radius: 9px;
+  border-width: 0 0 2px 2px;
+  box-shadow: 0px 2px 0 #2f2f2f;
+}
+
+.child-tabs {
+  background: #2f2f2f;
+  height: 27px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+}
+
+.child-tabs li {
+  padding: 3px 12px;
+  color: grey;
+  flex-grow: 1;
+}
+
+.child-tabs .react-tabs__tab--selected {
+  background: none;
+  color: white;
+  border: none;
 }

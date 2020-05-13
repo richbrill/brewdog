@@ -1,0 +1,15 @@
+.overflow {
+    overflow-y: auto;
+    /* TODO make the below number less magic */
+    height: calc(100% - 204px);
+  }
+  
+  .beers-list {
+    display: grid;
+    grid-template-columns: repeat(3, 28vw);
+    grid-template-rows: 28vw;
+    grid-gap: 4vw;
+    grid-auto-rows: 28vw;
+    padding: 4vw;
+    grid-row-gap: 6vh;
+  }
