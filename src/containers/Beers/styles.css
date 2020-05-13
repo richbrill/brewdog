@@ -1,15 +1,24 @@
-.overflow {
-    overflow-y: auto;
-    /* TODO make the below number less magic */
-    height: calc(100% - 204px);
-  }
-  
-  .beers-list {
-    display: grid;
-    grid-template-columns: repeat(3, 28vw);
-    grid-template-rows: 28vw;
-    grid-gap: 4vw;
-    grid-auto-rows: 28vw;
-    padding: 4vw;
-    grid-row-gap: 6vh;
-  }
+.beers-list {
+  display: grid;
+  grid-template-columns: repeat(3, 28vw);
+  grid-template-rows: 28vw;
+  grid-gap: 4vw;
+  grid-auto-rows: 28vw;
+  padding: 4vw;
+  grid-row-gap: 6vh;
+  overflow: auto;
+  height: calc(100vh - 197px);
+}
+
+.sort-btns {
+  display: flex;
+}
+
+.sort-btns button {
+  border: 1px solid #2f2f2f;
+  background: #2f2f2f;
+  color: white;
+  border-radius: 20px;
+  margin: 5px;
+  outline: none;
+}
